@@ -42,7 +42,10 @@ export default function MiniGamePage() {
     <Layout>
       <div className="p-8 max-w-4xl mx-auto">
         <div className="mb-6">
-          <Link href={`/games/${gameId}`} className="text-primary-400 hover:text-primary-300">
+          <Link
+            href={`/games/${gameId}`}
+            className="text-primary-400 hover:text-primary-300"
+          >
             ← Back to {game.title}
           </Link>
         </div>
@@ -66,14 +69,20 @@ export default function MiniGamePage() {
                 <p className="text-accent-blue font-semibold mb-4">
                   You've completed all modules in this game!
                 </p>
-                <Link href={`/games/${gameId}`} className="btn btn-primary inline-block">
+                <Link
+                  href={`/games/${gameId}`}
+                  className="btn btn-primary inline-block"
+                >
                   Back to Game
                 </Link>
               </div>
             )}
           </div>
         ) : (
-          <MiniGameView miniGame={miniGame} onComplete={handleMiniGameComplete} />
+          <MiniGameView
+            miniGame={miniGame}
+            onComplete={handleMiniGameComplete}
+          />
         )}
       </div>
     </Layout>
